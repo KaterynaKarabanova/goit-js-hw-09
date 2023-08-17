@@ -32,7 +32,7 @@ const fp = flatpickr(myInput, {enableTime: true,
   minuteIncrement: 1,
     onClose(selectedDates) {
       startBtn.addEventListener("click", onStart)
-      inputDate = (new Date(selectedDates.toString())).getTime()
+      const inputDate = (new Date(selectedDates.toString())).getTime()
       let ms = inputDate - Date.now()
       if (ms<=0) {
              Notiflix.Notify.failure('Please choose a date in the future');
