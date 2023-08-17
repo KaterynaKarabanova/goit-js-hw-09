@@ -55,7 +55,7 @@ const fp = flatpickr(myInput, {enableTime: true,
           spanHours.textContent = addLeadingZero(dateObj.hours)
           spanMin.textContent = addLeadingZero(dateObj.minutes)
           spanSec.textContent = addLeadingZero(dateObj.seconds)
-          console.log(inputDate - Date.now());         
+                  
       }, 1000)}
   }});
 
