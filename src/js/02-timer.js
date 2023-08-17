@@ -1,6 +1,6 @@
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
-const Notiflix = require('notiflix')
+import Notiflix from 'notiflix';
 
 const spanDays  = document.querySelector('.value[data-days]')
 const spanHours  = document.querySelector('.value[data-hours]')
