@@ -1,4 +1,4 @@
-import Notiflix from 'notiflix';
+const Notiflix = require('notiflix')
 
 const form = document.querySelector(".form");
 
