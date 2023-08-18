@@ -25,7 +25,8 @@ function addLeadingZero(value) {
    return value.toString().padStart(2, `0`)
 }
 
-let isstartBtnDisabled = true
+// let isstartBtnDisabled = true
+startBtn.setAttribute("disabled", "")
 const fp = flatpickr(myInput, {enableTime: true,
   time_24hr: true,
   defaultDate: new Date(),
@@ -38,11 +39,11 @@ const fp = flatpickr(myInput, {enableTime: true,
              Notiflix.Notify.failure('Please choose a date in the future');
               return
       } else {
-          isstartBtnDisabled = false
+          startBtn.removeAttribute("disabled", "")
       }
        
       function onStart() {
-            if (isstartBtnDisabled) {return}
+        startBtn.setAttribute("disabled", "")
             const interId = setInterval(() => {
                 if (ms < 1000) {
                     clearInterval(interId)

@@ -7,18 +7,20 @@ const body = document.querySelector("body")
 
 
 let onClickIntervalId
-let isAvailable = false
+
+stopBtn.setAttribute("disabled", "")
+
 
 function onClickStart() {
-  if (isAvailable) {return}
-  isAvailable = true
+  startBtn.setAttribute("disabled", "")
+  stopBtn.removeAttribute("disabled")
  onClickIntervalId = setInterval(()=>body.style.backgroundColor =  getRandomHexColor(), 1000)
     
 }
 
 function onClickStop() {
-  if (!isAvailable) {return}
-  isAvailable = false
+  stopBtn.setAttribute("disabled", "")
+  startBtn.removeAttribute("disabled")
   clearInterval(onClickIntervalId)
 }
 
